@@ -1,6 +1,13 @@
 .venv/
+venv/
 __pycache__/
 *.pyc
+*.db
 .env
-instance/
-.pytest_cache/
+*.zip
+*.log
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.idea/
+.vscode/
