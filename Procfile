@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app --bind 0.0.0.0:$PORT
+web: gunicorn --bind :8000 --workers 2 --threads 4 --access-logfile - application:application
