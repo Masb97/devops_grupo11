@@ -1,0 +1,32 @@
+2026-10-17T01:46:10.536000+00:00	INFO	Environment update is starting.
+2026-10-17T01:46:26.045000+00:00	INFO	Environment health has transitioned from Ok to Info. Application update in progress (running for 2 seconds).
+2026-10-17T01:46:34.688000+00:00	INFO	Rolling with Additional Batch deployment policy enabled. Launching  a new batch of 1 additional instance(s).
+2026-10-17T01:47:20.608000+00:00	INFO	Batch 1: 1 EC2 instance(s) [i-05dd0ae2af9d41bc8] launched. Deploying application version 'v2'.
+2026-10-17T01:47:26.068000+00:00	INFO	Added instance [i-05dd0ae2af9d41bc8] to your environment.
+2026-10-17T01:47:28.495000+00:00	INFO	Instance deployment used the commands in your 'Procfile' to initiate startup of your application.
+2026-10-17T01:47:34.011000+00:00	INFO	Instance deployment completed successfully.
+2026-10-17T01:47:48.406000+00:00	INFO	Batch 1: Completed application deployment.
+2026-10-17T01:47:48.437000+00:00	INFO	Command execution completed on 1 of 4 instances in environment.
+2026-10-17T01:47:50.988000+00:00	INFO	Deploying new version to instance(s).
+2026-10-17T01:47:51.855000+00:00	INFO	Batch 2: Starting application deployment on instance(s) [i-08bd5749f9016d469].
+2026-10-17T01:48:13.853000+00:00	INFO	Batch 2: Starting application deployment command execution.
+2026-10-17T01:48:15.198000+00:00	INFO	Instance deployment used the commands in your 'Procfile' to initiate startup of your application.
+2026-10-17T01:48:23.318000+00:00	INFO	Instance deployment completed successfully.
+2026-10-17T01:48:27.002000+00:00	INFO	Batch 2: Completed application deployment command execution.
+2026-10-17T01:48:27.035000+00:00	INFO	Command execution completed on 2 of 4 instances in environment.
+2026-10-17T01:48:27.560000+00:00	INFO	Batch 2: Registering instance(s) with the load balancer and waiting for them to be healthy. 
+2026-10-17T01:48:32.439000+00:00	INFO	Batch 2: Completed application deployment.
+2026-10-17T01:48:32.937000+00:00	INFO	Batch 3: Starting application deployment on instance(s) [i-07cb869f3e8a628aa].
+2026-10-17T01:48:54.971000+00:00	INFO	Batch 3: Starting application deployment command execution.
+2026-10-17T01:48:56.197000+00:00	INFO	Instance deployment used the commands in your 'Procfile' to initiate startup of your application.
+2026-10-17T01:49:05.086000+00:00	INFO	Instance deployment completed successfully.
+2026-10-17T01:49:08.282000+00:00	INFO	Batch 3: Completed application deployment command execution.
+2026-10-17T01:49:08.370000+00:00	INFO	Command execution completed on 3 of 4 instances in environment.
+2026-10-17T01:49:08.978000+00:00	INFO	Batch 3: Registering instance(s) with the load balancer and waiting for them to be healthy. 
+2026-10-17T01:49:13.811000+00:00	INFO	Batch 3: Completed application deployment.
+2026-10-17T01:49:30.904000+00:00	INFO	Terminating excess instance(s): [i-05746ab43c1ec7116].
+2026-10-17T01:49:33.341000+00:00	INFO	Excess instance(s) terminated.
+2026-10-17T01:49:35.676000+00:00	INFO	New application version was deployed to running EC2 instances.
+2026-10-17T01:49:35.703000+00:00	INFO	Environment update completed successfully.
+
+Duración (Events): 3 min 25 s  (2026-10-17T01:46:10.536000+00:00 → 2026-10-17T01:49:35.703000+00:00)
