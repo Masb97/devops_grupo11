@@ -1,0 +1,8 @@
+Peticiones: 360  (de 20:59:43.759 a 21:03:51.767, 4 min 08.0 s)
+Códigos:  200=360
+Errores 5xx: 0   Timeouts/sin respuesta (000): 0
+Versión inicial: v2   instancias: i-05dd0ae2af9d41bc8 i-07cb869f3e8a628aa i-08bd5749f9016d469
+Versión nueva:   v3   instancias: i-01492cb02351b39cd i-05dd0ae2af9d41bc8 i-07cb869f3e8a628aa
+Primera respuesta v3: 21:01:34.064
+Última respuesta  v2: 21:03:13.228
+Ventana de convivencia v1+v2: 1 min 39.2 s
