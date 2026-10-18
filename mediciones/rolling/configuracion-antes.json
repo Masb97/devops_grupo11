@@ -1,0 +1,137 @@
+[
+  [
+    {
+      "ResourceName": "AWSEBAutoScalingGroup",
+      "Namespace": "aws:autoscaling:asg",
+      "OptionName": "Availability Zones",
+      "Value": "Any"
+    },
+    {
+      "ResourceName": "AWSEBAutoScalingGroup",
+      "Namespace": "aws:autoscaling:asg",
+      "OptionName": "Cooldown",
+      "Value": "360"
+    },
+    {
+      "ResourceName": "AWSEBAutoScalingGroup",
+      "Namespace": "aws:autoscaling:asg",
+      "OptionName": "Custom Availability Zones",
+      "Value": ""
+    },
+    {
+      "ResourceName": "AWSEBAutoScalingGroup",
+      "Namespace": "aws:autoscaling:asg",
+      "OptionName": "EnableCapacityRebalancing",
+      "Value": "false"
+    },
+    {
+      "ResourceName": "AWSEBAutoScalingGroup",
+      "Namespace": "aws:autoscaling:asg",
+      "OptionName": "MaxSize",
+      "Value": "6"
+    },
+    {
+      "ResourceName": "AWSEBAutoScalingGroup",
+      "Namespace": "aws:autoscaling:asg",
+      "OptionName": "MinSize",
+      "Value": "3"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:command",
+      "OptionName": "BatchSize",
+      "Value": "1"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:command",
+      "OptionName": "BatchSizeType",
+      "Value": "Fixed"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:command",
+      "OptionName": "DeploymentPolicy",
+      "Value": "Rolling"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:command",
+      "OptionName": "IgnoreHealthCheck",
+      "Value": "false"
+    },
+    {
+      "Namespace": "aws:elasticbeanstalk:command",
+      "OptionName": "Timeout",
+      "Value": "600"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "DeregistrationDelay",
+      "Value": "20"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "HealthCheckInterval",
+      "Value": "15"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "HealthCheckPath",
+      "Value": "/ping"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "HealthCheckTimeout",
+      "Value": "5"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "HealthyThresholdCount",
+      "Value": "3"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "MatcherHTTPCode",
+      "Value": "200"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "Port",
+      "Value": "80"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "Protocol",
+      "Value": "HTTP"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "StickinessEnabled",
+      "Value": "false"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "StickinessLBCookieDuration",
+      "Value": "86400"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "StickinessType",
+      "Value": "lb_cookie"
+    },
+    {
+      "ResourceName": "AWSEBV2LoadBalancerTargetGroup",
+      "Namespace": "aws:elasticbeanstalk:environment:process:default",
+      "OptionName": "UnhealthyThresholdCount",
+      "Value": "5"
+    }
+  ]
+]

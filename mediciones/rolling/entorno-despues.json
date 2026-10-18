@@ -1,0 +1,27 @@
+{
+  "Environments": [
+    {
+      "EnvironmentName": "claudistas-rolling-env",
+      "EnvironmentId": "e-p72tbmtpcx",
+      "ApplicationName": "claudistas-blacklist",
+      "VersionLabel": "rolling-v1",
+      "SolutionStackName": "64bit Amazon Linux 2023 v4.13.10 running Python 3.13",
+      "PlatformArn": "arn:aws:elasticbeanstalk:us-east-2::platform/Python 3.13 running on 64bit Amazon Linux 2023/4.13.10",
+      "EndpointURL": "awseb--AWSEB-YBCLHyHXXMnM-2048395642.us-east-2.elb.amazonaws.com",
+      "CNAME": "claudistas-rolling-env.eba-ujgyzqcu.us-east-2.elasticbeanstalk.com",
+      "DateCreated": "2026-10-18T01:50:01.852000+00:00",
+      "DateUpdated": "2026-10-18T03:43:52.879000+00:00",
+      "Status": "Ready",
+      "AbortableOperationInProgress": false,
+      "Health": "Green",
+      "HealthStatus": "Ok",
+      "Tier": {
+        "Name": "WebServer",
+        "Type": "Standard",
+        "Version": "1.0"
+      },
+      "EnvironmentLinks": [],
+      "EnvironmentArn": "arn:aws:elasticbeanstalk:us-east-2:542945350090:environment/claudistas-blacklist/claudistas-rolling-env"
+    }
+  ]
+}

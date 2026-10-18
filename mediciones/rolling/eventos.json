@@ -1,0 +1,252 @@
+{
+  "Events": [
+    {
+      "EventDate": "2026-10-18T03:43:52.816000+00:00",
+      "Message": "Environment update completed successfully.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:43:52.784000+00:00",
+      "Message": "Successfully deployed new configuration to environment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:43:52.746000+00:00",
+      "Message": "New application version was deployed to running EC2 instances.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:43:02.617000+00:00",
+      "Message": "Batch 3: Completed application deployment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:58.726000+00:00",
+      "Message": "Batch 3: Registering instance(s) with the load balancer and waiting for them to be healthy. ",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:58.112000+00:00",
+      "Message": "Command execution completed on 3 of 3 instances in environment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:58.071000+00:00",
+      "Message": "Batch 3: Completed application deployment command execution.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:54.086000+00:00",
+      "Message": "Instance deployment completed successfully.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:46.165000+00:00",
+      "Message": "Instance deployment used the commands in your 'Procfile' to initiate startup of your application.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:44.981000+00:00",
+      "Message": "Batch 3: Starting application deployment command execution.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:23.065000+00:00",
+      "Message": "Batch 3: Starting application deployment on instance(s) [i-0c5d3a0f3b55f38dc].",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:40:22.609000+00:00",
+      "Message": "Batch 2: Completed application deployment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:38:18.792000+00:00",
+      "Message": "Batch 2: Registering instance(s) with the load balancer and waiting for them to be healthy. ",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:38:18.095000+00:00",
+      "Message": "Command execution completed on 2 of 3 instances in environment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:38:18.054000+00:00",
+      "Message": "Batch 2: Completed application deployment command execution.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:38:14.717000+00:00",
+      "Message": "Instance deployment completed successfully.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:38:06.547000+00:00",
+      "Message": "Instance deployment used the commands in your 'Procfile' to initiate startup of your application.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:38:04.765000+00:00",
+      "Message": "Batch 2: Starting application deployment command execution.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:37:42.526000+00:00",
+      "Message": "Batch 2: Starting application deployment on instance(s) [i-095094d3a5a54fc88].",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:37:42.012000+00:00",
+      "Message": "Batch 1: Completed application deployment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:38.210000+00:00",
+      "Message": "Batch 1: Registering instance(s) with the load balancer and waiting for them to be healthy. ",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:37.703000+00:00",
+      "Message": "Command execution completed on 1 of 3 instances in environment.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:37.679000+00:00",
+      "Message": "Batch 1: Completed application deployment command execution.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:33.655000+00:00",
+      "Message": "Instance deployment completed successfully.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:25.959000+00:00",
+      "Message": "Instance deployment used the commands in your 'Procfile' to initiate startup of your application.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:24.547000+00:00",
+      "Message": "Batch 1: Starting application deployment command execution.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:10.230000+00:00",
+      "Message": "Environment health has transitioned from Ok to Info. Application update in progress (running for 2 seconds).",
+      "ApplicationName": "claudistas-blacklist",
+      "VersionLabel": "blacklist-base-01",
+      "EnvironmentName": "claudistas-rolling-env",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:02.592000+00:00",
+      "Message": "Batch 1: Starting application deployment on instance(s) [i-0f8a2792d857ac0ed].",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:35:01.681000+00:00",
+      "Message": "Deploying new version to instance(s).",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:34:43.145000+00:00",
+      "Message": "Updating environment claudistas-rolling-env's configuration settings.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    },
+    {
+      "EventDate": "2026-10-18T03:34:35.730000+00:00",
+      "Message": "Environment update is starting.",
+      "ApplicationName": "claudistas-blacklist",
+      "EnvironmentName": "claudistas-rolling-env",
+      "RequestId": "1abdadc6-6fb9-4b06-97fe-107f31f3aada",
+      "Severity": "INFO"
+    }
+  ]
+}

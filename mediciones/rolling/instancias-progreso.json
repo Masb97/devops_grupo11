@@ -1,0 +1,158 @@
+{
+  "InstanceHealthList": [
+    {
+      "InstanceId": "i-0f8a2792d857ac0ed",
+      "HealthStatus": "Ok",
+      "Color": "Green",
+      "Causes": [],
+      "LaunchedAt": "2026-10-18T01:51:03+00:00",
+      "ApplicationMetrics": {
+        "Duration": 10,
+        "RequestCount": 5,
+        "StatusCodes": {
+          "Status2xx": 5,
+          "Status3xx": 0,
+          "Status4xx": 0,
+          "Status5xx": 0
+        },
+        "Latency": {
+          "P999": 0.001,
+          "P99": 0.001,
+          "P95": 0.001,
+          "P90": 0.001,
+          "P85": 0.001,
+          "P75": 0.001,
+          "P50": 0.001,
+          "P10": 0.001
+        }
+      },
+      "System": {
+        "CPUUtilization": {
+          "User": 0.1,
+          "Nice": 0.0,
+          "System": 0.1,
+          "Idle": 99.7,
+          "IOWait": 0.0,
+          "IRQ": 0.0,
+          "SoftIRQ": 0.1
+        },
+        "LoadAverage": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Deployment": {
+        "VersionLabel": "blacklist-base-01",
+        "DeploymentId": 3,
+        "Status": "Deployed",
+        "DeploymentTime": "2026-10-18T03:13:39+00:00"
+      },
+      "AvailabilityZone": "us-east-2b",
+      "InstanceType": "t3.micro"
+    },
+    {
+      "InstanceId": "i-0c5d3a0f3b55f38dc",
+      "HealthStatus": "Ok",
+      "Color": "Green",
+      "Causes": [],
+      "LaunchedAt": "2026-10-18T01:51:03+00:00",
+      "ApplicationMetrics": {
+        "Duration": 10,
+        "RequestCount": 8,
+        "StatusCodes": {
+          "Status2xx": 8,
+          "Status3xx": 0,
+          "Status4xx": 0,
+          "Status5xx": 0
+        },
+        "Latency": {
+          "P999": 0.001,
+          "P99": 0.001,
+          "P95": 0.001,
+          "P90": 0.001,
+          "P85": 0.001,
+          "P75": 0.001,
+          "P50": 0.001,
+          "P10": 0.001
+        }
+      },
+      "System": {
+        "CPUUtilization": {
+          "User": 0.3,
+          "Nice": 0.0,
+          "System": 0.1,
+          "Idle": 99.5,
+          "IOWait": 0.0,
+          "IRQ": 0.0,
+          "SoftIRQ": 0.0
+        },
+        "LoadAverage": [
+          0.0,
+          0.01,
+          0.0
+        ]
+      },
+      "Deployment": {
+        "VersionLabel": "blacklist-base-01",
+        "DeploymentId": 3,
+        "Status": "Deployed",
+        "DeploymentTime": "2026-10-18T03:19:08+00:00"
+      },
+      "AvailabilityZone": "us-east-2c",
+      "InstanceType": "t3.micro"
+    },
+    {
+      "InstanceId": "i-095094d3a5a54fc88",
+      "HealthStatus": "Ok",
+      "Color": "Green",
+      "Causes": [],
+      "LaunchedAt": "2026-10-18T01:51:03+00:00",
+      "ApplicationMetrics": {
+        "Duration": 10,
+        "RequestCount": 4,
+        "StatusCodes": {
+          "Status2xx": 4,
+          "Status3xx": 0,
+          "Status4xx": 0,
+          "Status5xx": 0
+        },
+        "Latency": {
+          "P999": 0.002,
+          "P99": 0.002,
+          "P95": 0.002,
+          "P90": 0.002,
+          "P85": 0.002,
+          "P75": 0.002,
+          "P50": 0.001,
+          "P10": 0.001
+        }
+      },
+      "System": {
+        "CPUUtilization": {
+          "User": 0.1,
+          "Nice": 0.0,
+          "System": 0.0,
+          "Idle": 99.9,
+          "IOWait": 0.0,
+          "IRQ": 0.0,
+          "SoftIRQ": 0.0
+        },
+        "LoadAverage": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "Deployment": {
+        "VersionLabel": "blacklist-base-01",
+        "DeploymentId": 3,
+        "Status": "Deployed",
+        "DeploymentTime": "2026-10-18T03:16:25+00:00"
+      },
+      "AvailabilityZone": "us-east-2a",
+      "InstanceType": "t3.micro"
+    }
+  ],
+  "RefreshedAt": "2026-10-18T03:34:53+00:00"
+}

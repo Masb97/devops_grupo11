@@ -1,0 +1,34 @@
+{
+  "EnvironmentResources": {
+    "EnvironmentName": "claudistas-rolling-env",
+    "AutoScalingGroups": [
+      {
+        "Name": "awseb-e-p72tbmtpcx-stack-AWSEBAutoScalingGroup-USHicPjxFvNQ"
+      }
+    ],
+    "Instances": [
+      {
+        "Id": "i-0f8a2792d857ac0ed"
+      },
+      {
+        "Id": "i-095094d3a5a54fc88"
+      },
+      {
+        "Id": "i-0c5d3a0f3b55f38dc"
+      }
+    ],
+    "LaunchConfigurations": [],
+    "LaunchTemplates": [
+      {
+        "Id": "lt-0113c9638d5b8f4f0"
+      }
+    ],
+    "LoadBalancers": [
+      {
+        "Name": "arn:aws:elasticloadbalancing:us-east-2:542945350090:loadbalancer/app/awseb--AWSEB-YBCLHyHXXMnM/8c65820c27a30b3e"
+      }
+    ],
+    "Triggers": [],
+    "Queues": []
+  }
+}

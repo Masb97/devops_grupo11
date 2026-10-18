@@ -1,0 +1,8 @@
+Peticiones: 1152  (de 22:30:40.981 a 22:44:39.122, 13 min 58.1 s)
+Códigos:  000=2  200=1150
+Errores 5xx: 0   Timeouts/sin respuesta (000): 2
+Versión inicial: v3   instancias: i-095094d3a5a54fc88 i-0f8a2792d857ac0ed i-0c5d3a0f3b55f38dc
+Versión nueva:   rolling-v1   instancias: i-0f8a2792d857ac0ed i-095094d3a5a54fc88 i-0c5d3a0f3b55f38dc
+Primera respuesta rolling-v1: 22:35:41.787
+Última respuesta  v3: 22:40:21.353
+Ventana de convivencia v1+v2: 4 min 39.6 s
