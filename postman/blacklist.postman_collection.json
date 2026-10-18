@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "34a37aa7-78a4-49fd-9005-92a005d20011",
     "name": "Blacklist API · Entrega 1",
-    "description": "Microservicio de lista negra global de emails (Flask en AWS Elastic Beanstalk).",
+    "description": "Microservicio REST de **lista negra global de emails**, desplegado en AWS Elastic Beanstalk\ncon PostgreSQL en Amazon RDS. Entrega 1 del curso DevOps (MISO), grupo Claudistas.\n\n## APIs\n\n| Método | Ruta | Función | Token |\n| --- | --- | --- | --- |\n| `POST` | `/blacklists` | Agrega un email a la lista negra | Sí |\n| `GET` | `/blacklists/{email}` | Indica si un email está en la lista y el motivo | Sí |\n| `GET` | `/version` | Versión desplegada e instancia que respondió | No |\n\n## Configuración\n\n| Variable | Valor |\n| --- | --- |\n| `baseUrl` | URL del entorno, sin `/` final. En local: `http://localhost:5000`. En AWS: la URL del entorno de Beanstalk. |\n| `token` | JWT de acceso. Defínelo en un *environment* como variable *secret*; no lo subas al repositorio. |\n\nEl repositorio incluye `aws.postman_environment.json` con estas dos variables.\n\n## Autenticación\n\nLos endpoints `/blacklists` exigen el encabezado `Authorization: Bearer {{token}}`.\nEl token es estático: un JWT sin vencimiento, firmado con el secreto `JWT_SECRET_KEY` del entorno.\nSe genera con la misma clave que tiene el servidor:\n\n    export JWT_SECRET_KEY=<la misma clave del entorno>\n    flask --app application crear-token\n\nSi falta el token, o es inválido o está firmado con otra clave, el servicio responde `401`.\n\n## Formato de errores\n\nLos errores responden JSON con un campo `msg` legible y, según el caso:\n- `errores`: en los `400` de validación, los motivos por campo.\n- `detalle`: en los `401`, el motivo técnico de la librería JWT.\n\n## Orden de ejecución\n\nLa primera petición genera un email nuevo y lo guarda en `{{email}}`; la consulta\n«200 bloqueado» lo reutiliza. Con *Run collection* se ejecutan en el orden correcto.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "49391266"
   },
@@ -61,7 +61,7 @@
             "blacklists"
           ]
         },
-        "description": "Agrega un email a la lista negra global. Requiere Bearer token. `email` y `app_uuid` (UUID) obligatorios; `blocked_reason` opcional, máximo 255 caracteres. Guarda la IP de origen y la fecha/hora."
+        "description": "Agrega un email a la lista negra global.\n\n| Campo | Tipo | Obligatorio | Reglas |\n| --- | --- | --- | --- |\n| `email` | string | Sí | Email válido. Se guarda en minúsculas y sin espacios. No puede repetirse. |\n| `app_uuid` | string (UUID) | Sí | UUID de la aplicación que hace la solicitud. |\n| `blocked_reason` | string | No | Máximo 255 caracteres. Si se omite queda `null`. |\n\nLos campos extra se ignoran. El servicio guarda además la IP de origen (encabezado\n`X-Forwarded-For` del balanceador) y la fecha y hora de creación en UTC.\n\nEl script previo genera un email único (`prueba+<marca de tiempo>@ejemplo.com`) y un UUID\naleatorio, y los guarda en `{{email}}` y `{{appUuid}}`.\n\n| Código | Cuándo |\n| --- | --- |\n| `201` | Email agregado: `{\"msg\": \"Email agregado a la lista negra\", \"id\": <número>}` |\n| `400` | El cuerpo no es JSON, o algún campo no cumple las reglas |\n| `401` | Falta el token o es inválido |\n| `409` | El email ya estaba en la lista: `{\"msg\": \"El email ya estaba en la lista negra\"}` |"
       },
       "response": [
         {
@@ -96,7 +96,7 @@
                 "blacklists"
               ]
             },
-            "description": "Agrega un email a la lista negra global. Requiere Bearer token. `email` y `app_uuid` (UUID) obligatorios; `blocked_reason` opcional, máximo 255 caracteres. Guarda la IP de origen y la fecha/hora."
+            "description": "Agrega un email a la lista negra global.\n\n| Campo | Tipo | Obligatorio | Reglas |\n| --- | --- | --- | --- |\n| `email` | string | Sí | Email válido. Se guarda en minúsculas y sin espacios. No puede repetirse. |\n| `app_uuid` | string (UUID) | Sí | UUID de la aplicación que hace la solicitud. |\n| `blocked_reason` | string | No | Máximo 255 caracteres. Si se omite queda `null`. |\n\nLos campos extra se ignoran. El servicio guarda además la IP de origen (encabezado\n`X-Forwarded-For` del balanceador) y la fecha y hora de creación en UTC.\n\nEl script previo genera un email único (`prueba+<marca de tiempo>@ejemplo.com`) y un UUID\naleatorio, y los guarda en `{{email}}` y `{{appUuid}}`.\n\n| Código | Cuándo |\n| --- | --- |\n| `201` | Email agregado: `{\"msg\": \"Email agregado a la lista negra\", \"id\": <número>}` |\n| `400` | El cuerpo no es JSON, o algún campo no cumple las reglas |\n| `401` | Falta el token o es inválido |\n| `409` | El email ya estaba en la lista: `{\"msg\": \"El email ya estaba en la lista negra\"}` |"
           },
           "status": "CREATED",
           "code": 201,
@@ -150,7 +150,8 @@
           "path": [
             "blacklists"
           ]
-        }
+        },
+        "description": "Envía la petición **sin** el encabezado `Authorization`. El servicio la rechaza con `401`\nantes de validar el cuerpo: `{\"msg\": \"Falta el token Bearer\", \"detalle\": \"Missing Authorization Header\"}`."
       },
       "response": [
         {
@@ -239,7 +240,8 @@
           "path": [
             "blacklists"
           ]
-        }
+        },
+        "description": "Envía un `email` sin formato de email y un `app_uuid` que no es UUID. El servicio responde `400`\ncon `\"msg\": \"Datos inválidos\"` y, en `errores`, la lista de motivos por cada campo inválido.\n\nOtros motivos posibles en `errores`:\n- `app_uuid` ausente: `Missing data for required field.`\n- `blocked_reason` de más de 255 caracteres: `Longer than maximum length 255.`\n\nSi el cuerpo no es JSON, la respuesta es `{\"msg\": \"El cuerpo debe ser JSON\"}`."
       },
       "response": [
         {
@@ -321,7 +323,7 @@
             "{{email}}"
           ]
         },
-        "description": "Indica si el email está en la lista negra global y el motivo. Requiere Bearer token."
+        "description": "Indica si un email está en la lista negra global y, si lo está, el motivo. Requiere Bearer token.\n\nConsulta el email `{{email}}` que agregó la primera petición, así que debe ejecutarse después de ella.\nLa búsqueda no distingue mayúsculas de minúsculas.\n\n| Campo de la respuesta | Descripción |\n| --- | --- |\n| `email` | Email consultado |\n| `is_blacklisted` | `true` si está en la lista |\n| `blocked_reason` | Motivo guardado, o `null` |"
       },
       "response": [
         {
@@ -344,7 +346,7 @@
                 "{{email}}"
               ]
             },
-            "description": "Indica si el email está en la lista negra global y el motivo. Requiere Bearer token."
+            "description": "Indica si un email está en la lista negra global y, si lo está, el motivo. Requiere Bearer token.\n\nConsulta el email `{{email}}` que agregó la primera petición, así que debe ejecutarse después de ella.\nLa búsqueda no distingue mayúsculas de minúsculas.\n\n| Campo de la respuesta | Descripción |\n| --- | --- |\n| `email` | Email consultado |\n| `is_blacklisted` | `true` si está en la lista |\n| `blocked_reason` | Motivo guardado, o `null` |"
           },
           "status": "OK",
           "code": 200,
@@ -391,7 +393,8 @@
             "blacklists",
             "limpio@ejemplo.com"
           ]
-        }
+        },
+        "description": "Consulta `limpio@ejemplo.com`, que no está en la lista. Un email que no está en la lista\n**no** devuelve 404: responde `200` con `is_blacklisted: false` y `blocked_reason: null`."
       },
       "response": [
         {
@@ -454,7 +457,8 @@
             "blacklists",
             "limpio@ejemplo.com"
           ]
-        }
+        },
+        "description": "Consulta **sin** el encabezado `Authorization`. El servicio responde `401`:\n`{\"msg\": \"Falta el token Bearer\", \"detalle\": \"Missing Authorization Header\"}`.\nCon un token mal formado o firmado con otra clave la respuesta es `401` con `\"msg\": \"Token inválido\"`."
       },
       "response": [
         {
@@ -527,7 +531,8 @@
           "path": [
             "version"
           ]
-        }
+        },
+        "description": "Devuelve la versión desplegada (archivo `VERSION`) y el ID de la instancia EC2 que atendió la petición.\nNo requiere token ni consulta la base de datos. Se usa para medir los despliegues: llamándola\nrepetidamente se ve qué versión e instancia responde en cada momento. Fuera de EC2, `instance` vale\n`local-<hostname>`."
       },
       "response": [
         {
@@ -603,19 +608,23 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://localhost:5000"
+      "value": "http://localhost:5000",
+      "description": "URL del entorno, sin `/` final."
     },
     {
       "key": "token",
-      "value": "PEGA_AQUI_EL_TOKEN"
+      "value": "PEGA_AQUI_EL_TOKEN",
+      "description": "JWT de acceso. Mejor definirlo en un environment como secret."
     },
     {
       "key": "email",
-      "value": ""
+      "value": "",
+      "description": "Lo genera la primera petición; lo reutiliza la consulta «200 bloqueado»."
     },
     {
       "key": "appUuid",
-      "value": ""
+      "value": "",
+      "description": "UUID aleatorio que genera la primera petición."
     }
   ]
 }

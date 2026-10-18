@@ -11,3 +11,4 @@ __pycache__/
 !.elasticbeanstalk/*.global.yml
 .idea/
 .vscode/
+.DS_Store
