@@ -1,0 +1,39 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.13
+    commands:
+      - python --version
+      - python -m pip install -r requirements-dev.txt
+  build:
+    commands:
+      - python -m pytest
+
+artifacts:
+  files:
+    - "**/*"
+  exclude-paths:
+    - ".git/**/*"
+    - ".venv/**/*"
+    - "venv/**/*"
+    - "**/__pycache__/**/*"
+    - "**/*.pyc"
+    - "**/*.db"
+    - "**/.env"
+    - "**/*.zip"
+    - "**/*.log"
+    - ".elasticbeanstalk/**/*"
+    - ".idea/**/*"
+    - ".vscode/**/*"
+    - "**/.DS_Store"
+    - ".coverage"
+    - ".pytest_cache/**/*"
+    - "htmlcov/**/*"
+    - "postman/**/*"
+    - "scripts/**/*"
+    - "mediciones/**/*"
+    - "tests/**/*"
+    - "pytest.ini"
+    - "requirements-dev.txt"
