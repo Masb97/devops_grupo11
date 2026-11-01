@@ -9,31 +9,15 @@ phases:
       - python -m pip install -r requirements-dev.txt
   build:
     commands:
+      - rm -rf ci-artifact
       - python -m pytest
+      - mkdir -p ci-artifact/.ebextensions
+      - cp application.py config.py extensions.py instancia.py models.py resources.py schemas.py requirements.txt Procfile VERSION ci-artifact/
+      - cp .ebextensions/*.config ci-artifact/.ebextensions/
+      - printf '%s\n' "$CODEBUILD_RESOLVED_SOURCE_VERSION" > ci-artifact/CI_COMMIT.txt
 
 artifacts:
+  base-directory: ci-artifact
   files:
     - "**/*"
-  exclude-paths:
-    - ".git/**/*"
-    - ".venv/**/*"
-    - "venv/**/*"
-    - "**/__pycache__/**/*"
-    - "**/*.pyc"
-    - "**/*.db"
-    - "**/.env"
-    - "**/*.zip"
-    - "**/*.log"
-    - ".elasticbeanstalk/**/*"
-    - ".idea/**/*"
-    - ".vscode/**/*"
-    - "**/.DS_Store"
-    - ".coverage"
-    - ".pytest_cache/**/*"
-    - "htmlcov/**/*"
-    - "postman/**/*"
-    - "scripts/**/*"
-    - "mediciones/**/*"
-    - "tests/**/*"
-    - "pytest.ini"
-    - "requirements-dev.txt"
+    - ".ebextensions/**/*"
